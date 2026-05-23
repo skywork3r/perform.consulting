@@ -1,6 +1,16 @@
+@font-face {
+  font-family: Intervariable;
+  src: url('../fonts/InterVariable.woff2') format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --black: black;
   --white: white;
+  font-synthesis-weight: none;
+  font-synthesis-style: none;
 }
 
 .w-layout-grid {
@@ -14,10 +24,17 @@
 
 body {
   color: #1a1b1f;
-  font-family: Montserrat, sans-serif;
+  font-family: Intervariable, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: Intervariable, Arial, sans-serif;
 }
 
 h1 {
@@ -1056,7 +1073,7 @@ figcaption {
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
-  font-family: Montserrat, sans-serif;
+  font-family: Intervariable, Arial, sans-serif;
   display: flex;
 }
 
@@ -1072,7 +1089,7 @@ figcaption {
   text-align: center;
   border: 0 solid #000;
   max-width: 800px;
-  font-family: Montserrat, sans-serif;
+  font-family: Intervariable, Arial, sans-serif;
   font-size: 36px;
   font-weight: 700;
   line-height: 48px;
@@ -1136,7 +1153,7 @@ figcaption {
   border: 0 solid #000;
   max-width: 800px;
   margin-bottom: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: Intervariable, Arial, sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -1287,7 +1304,7 @@ figcaption {
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
-  font-family: Montserrat, sans-serif;
+  font-family: Intervariable, Arial, sans-serif;
   display: flex;
 }
 
