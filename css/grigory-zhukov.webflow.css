@@ -1181,17 +1181,61 @@ figcaption {
 }
 
 .intro-header-pc {
-  color: #fff;
-  background-color: #f4f4f4;
-  background-image: url('../images/front-1-ready.jpg');
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  box-sizing: border-box;
+  color: #1a1b1f;
+  background-color: #f5f5f5;
+  background-image: none;
   justify-content: center;
   align-items: center;
-  height: 620px;
-  margin-bottom: 200px;
+  min-height: 527px;
+  margin-bottom: 0;
+  padding: 57.6px 0;
   display: flex;
+  position: relative;
+}
+
+.intro-header-pc:after {
+  content: none;
+  display: none;
+}
+
+.intro-header-pc .intro-content.cc-homepage {
+  width: min(92%, 980px);
+  max-width: none;
+  margin-bottom: 0;
+}
+
+.intro-header-pc .intro-text {
+  width: 100%;
+  max-width: 920px;
+  margin-bottom: 0;
+  transform: translateY(-31px);
+}
+
+.intro-header-pc .heading-jumbo {
+  color: #1a1b1f;
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-size: 62px;
+  font-weight: 500;
+  line-height: 70px;
+}
+
+.intro-header-pc .hero-title-line {
+  display: block;
+}
+
+.intro-header-pc .paragraph-bigger.cc-bigger-white-light {
+  opacity: 1;
+  color: rgb(26 27 31 / .64);
+  max-width: 520px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.intro-header-pc + .section.cc-store-home-wrap .home-content-wrap {
+  margin-top: 0;
 }
 
 .intro-header-pc.cc-subpage {
@@ -1685,6 +1729,44 @@ figcaption {
   height: 300px;
 }
 
+.pcourserviceshdr .heading-jumbo,
+.pccareershdr .heading-jumbo,
+.pccontactushdr .heading-jumbo {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 47px;
+  font-weight: 500;
+  line-height: 53px;
+}
+
+.contact-form-heading-wrap .paragraph-bigger,
+.container-3 > .paragraph-bigger {
+  color: #1a1b1f;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 47px;
+  font-weight: 500;
+  line-height: 53px;
+}
+
+.pcsericetypeparagraph,
+.paragraphcareerstop,
+.paragraphcareers,
+.paragraphcareersbottom,
+.paragraphlightcareers,
+.paragraphlightcareersbottom,
+.paragraphlightcareerslist,
+.contact-form-heading-wrap .paragraph-light,
+.details-wrap .paragraph-light,
+.contact-email-link {
+  opacity: 1;
+  color: #1a1b1f;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
 @media screen and (max-width: 991px) {
   .pcsectionheading {
     font-size: 47px;
@@ -1939,7 +2021,20 @@ figcaption {
   }
 
   .intro-header-pc {
-    margin-bottom: 200px;
+    min-height: 520px;
+    margin-bottom: 0;
+    padding-top: 52.8px;
+    padding-bottom: 52.8px;
+  }
+
+  .intro-header-pc .heading-jumbo {
+    font-size: 54px;
+    line-height: 62px;
+  }
+
+  .intro-header-pc .paragraph-bigger.cc-bigger-white-light {
+    font-size: 21px;
+    line-height: 31px;
   }
 
   .section-copy.cc-cta {
@@ -2071,6 +2166,14 @@ figcaption {
     width: 80%;
   }
 
+  .intro-header-pc .intro-content.cc-homepage {
+    width: min(90%, 620px);
+  }
+
+  .intro-header-pc .intro-text {
+    transform: translateY(-16px);
+  }
+
   .our-services-grid {
     grid-row-gap: 20px;
     grid-template: "."
@@ -2187,7 +2290,21 @@ figcaption {
   }
 
   .intro-header-pc {
-    margin-bottom: 160px;
+    min-height: 441px;
+    margin-bottom: 0;
+    padding-top: 45.6px;
+    padding-bottom: 45.6px;
+  }
+
+  .intro-header-pc .heading-jumbo {
+    margin-bottom: 22px;
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .intro-header-pc .paragraph-bigger.cc-bigger-white-light {
+    font-size: 18px;
+    line-height: 28px;
   }
 
   .section-copy {
@@ -2260,6 +2377,29 @@ figcaption {
 
   .pccontactushdr.cc-subpage {
     margin-bottom: 60px;
+  }
+
+  .pcourserviceshdr .heading-jumbo,
+  .pccareershdr .heading-jumbo,
+  .pccontactushdr .heading-jumbo,
+  .contact-form-heading-wrap .paragraph-bigger,
+  .container-3 > .paragraph-bigger {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .pcsericetypeparagraph,
+  .paragraphcareerstop,
+  .paragraphcareers,
+  .paragraphcareersbottom,
+  .paragraphlightcareers,
+  .paragraphlightcareersbottom,
+  .paragraphlightcareerslist,
+  .contact-form-heading-wrap .paragraph-light,
+  .details-wrap .paragraph-light,
+  .contact-email-link {
+    font-size: 15px;
+    line-height: 25px;
   }
 }
 
@@ -2374,10 +2514,22 @@ figcaption {
   }
 
   .intro-header-pc {
-    background-image: url('../images/front-1-ready.jpg');
-    background-position: 50%;
-    background-size: cover;
-    margin-bottom: 140px;
+    background-image: none;
+    min-height: 392px;
+    margin-bottom: 0;
+    padding-top: 38.4px;
+    padding-bottom: 38.4px;
+  }
+
+  .intro-header-pc .heading-jumbo {
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .intro-header-pc .paragraph-bigger.cc-bigger-white-light {
+    font-size: 16px;
+    line-height: 26px;
   }
 
   .paragraph-tiny-copy {
@@ -2575,8 +2727,8 @@ body.sc-menu-open {
 }
 
 body {
-  --pc-nav-bg: rgb(255 255 255 / .82);
-  --pc-mobile-menu-bg: rgb(236 236 236 / .95);
+  --pc-nav-bg: rgb(245 245 245 / .7);
+  --pc-mobile-menu-bg: rgb(245 245 245 / .95);
   --pc-nav-text: #777;
   --pc-nav-text-active: #1d1d1d;
   --pc-nav-accent: #7f9fbd;
@@ -2609,6 +2761,7 @@ body {
 .navigation-wrap {
   grid-template-columns: minmax(0, 25%) auto minmax(0, 25%);
   align-items: center;
+  background-color: transparent;
   width: min(1280px, calc(100vw - 2.4rem));
   height: 3.75rem;
   max-width: none;
@@ -2844,6 +2997,8 @@ body {
   .navigation .w-nav-overlay:has(.navigation-items[data-nav-menu-open]) {
     pointer-events: auto;
     background: var(--pc-mobile-menu-bg);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
     height: 100vh !important;
     height: 100dvh !important;
     position: fixed;
