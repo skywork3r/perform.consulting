@@ -23,6 +23,7 @@
 }
 
 body {
+  background-color: #f5f5f5;
   color: #1a1b1f;
   font-family: Intervariable, Arial, sans-serif;
   font-size: 16px;
@@ -191,7 +192,7 @@ figcaption {
 
 .container {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -229,12 +230,12 @@ figcaption {
   text-transform: uppercase;
   background-color: #1a1b1f;
   border-radius: 8em;
-  min-width: 200px;
-  max-width: 300px;
+  min-width: 170px;
+  max-width: 255px;
   margin: 20px auto 0;
-  padding: 12px 25px;
-  font-size: 12px;
-  font-weight: 700;
+  padding: 12px 21px;
+  font-size: 11px;
+  font-weight: 500;
   line-height: 20px;
   text-decoration: none;
   transition: background-color .4s, opacity .4s, color .4s;
@@ -426,7 +427,7 @@ figcaption {
   text-transform: uppercase;
   padding-top: 9px;
   padding-bottom: 9px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   line-height: 20px;
 }
@@ -985,18 +986,28 @@ figcaption {
 }
 
 .about-grid {
-  grid-column-gap: 80px;
-  grid-row-gap: 30px;
+  grid-column-gap: 70px;
+  grid-row-gap: 0;
   grid-template: ". ."
-  / 1fr 2fr;
+  / minmax(0, 3fr) minmax(0, 4fr);
   align-items: center;
   margin-bottom: 200px;
 }
 
 .about-grid.cc-about-2 {
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 3fr);
   grid-template-areas: ". .";
   margin-bottom: 200px;
+}
+
+.about-grid > * {
+  min-width: 0;
+}
+
+.about-grid .rounded-edges {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .intro-text {
@@ -1055,7 +1066,7 @@ figcaption {
 }
 
 .text-block {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .rounded-edges {
@@ -1103,13 +1114,13 @@ figcaption {
 }
 
 .paragraph {
-  color: #747474;
+  color: #1a1b1f;
   max-width: 800px;
   margin-top: 20px;
   margin-bottom: 0;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
 }
 
 .call-to-action-buttons {
@@ -1152,6 +1163,7 @@ figcaption {
   text-align: center;
   border: 0 solid #000;
   max-width: 800px;
+  margin-top: 0;
   margin-bottom: 0;
   font-family: Intervariable, Arial, sans-serif;
   font-size: 36px;
@@ -1163,8 +1175,8 @@ figcaption {
 .pcsectionheading {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 43px;
-  font-weight: 700;
+  font-size: 47px;
+  font-weight: 500;
   line-height: 53px;
 }
 
@@ -1310,9 +1322,9 @@ figcaption {
 
 .centered-container-pc.hero {
   justify-content: flex-start;
-  min-height: 300px;
+  min-height: 0;
   margin-top: 0;
-  margin-bottom: 140px;
+  margin-bottom: 200px;
   padding: 0;
 }
 
@@ -1476,9 +1488,9 @@ figcaption {
   border-radius: 8em;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 12px 25px;
-  font-size: 12px;
-  font-weight: 700;
+  padding: 12px 21px;
+  font-size: 11px;
+  font-weight: 500;
   line-height: 20px;
   text-decoration: none;
   transition: background-color .4s, opacity .4s, color .4s;
@@ -1674,6 +1686,10 @@ figcaption {
 }
 
 @media screen and (max-width: 991px) {
+  .pcsectionheading {
+    font-size: 47px;
+  }
+
   .section {
     max-width: 90%;
   }
@@ -1877,6 +1893,7 @@ figcaption {
   }
 
   .about-grid {
+    grid-column-gap: 0;
     grid-row-gap: 50px;
     text-align: center;
     grid-template: "."
@@ -1945,7 +1962,7 @@ figcaption {
   }
 
   .centered-container-pc.hero {
-    margin-bottom: 180px;
+    margin-bottom: 200px;
   }
 
   .div-block {
@@ -1984,6 +2001,11 @@ figcaption {
 }
 
 @media screen and (max-width: 767px) {
+  .pcsectionheading {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
   .section {
     margin-left: auto;
     margin-right: auto;
@@ -2149,8 +2171,8 @@ figcaption {
   }
 
   .paragraph {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 15px;
+    line-height: 25px;
   }
 
   .call-to-action-buttons {
@@ -2196,7 +2218,6 @@ figcaption {
   }
 
   .centered-container-pc.hero {
-    min-height: 200px;
     margin-bottom: 180px;
     padding-top: 0;
     padding-bottom: 0;
@@ -2348,8 +2369,8 @@ figcaption {
   }
 
   .pcsectionheading {
-    font-size: 35px;
-    line-height: 45px;
+    font-size: 40px;
+    line-height: 46px;
   }
 
   .intro-header-pc {
@@ -2372,7 +2393,7 @@ figcaption {
   }
 
   .centered-container-pc.hero {
-    margin-bottom: 160px;
+    margin-bottom: 140px;
     padding-bottom: 0;
   }
 
@@ -2611,8 +2632,8 @@ body {
 }
 
 .navigation .logo-image {
-  width: 3rem;
-  height: 3rem;
+  width: 45px;
+  height: 45px;
   object-fit: contain;
 }
 
@@ -2643,7 +2664,7 @@ body {
   text-transform: uppercase;
   background-color: transparent !important;
   padding: 0 1.15rem;
-  font-size: .88rem;
+  font-size: .77rem;
   font-weight: 500;
   line-height: 3.35rem;
   text-decoration: none;
@@ -2966,7 +2987,7 @@ body {
 /* Perform footer, adapted from Hypername's landing footer. */
 .footerph {
   color: #1a1b1f;
-  background: #fff;
+  background: transparent;
   font-weight: 500;
 }
 
