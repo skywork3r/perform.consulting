@@ -576,7 +576,7 @@ figcaption {
   text-align: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: ".";
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .section-heading-wrap {
@@ -721,6 +721,8 @@ figcaption {
 .contact-map {
   width: 100%;
   margin-bottom: 0;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .contact-details {
@@ -1987,7 +1989,7 @@ figcaption {
                    ". ."
                    / 1fr 1fr;
     width: auto;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
   }
