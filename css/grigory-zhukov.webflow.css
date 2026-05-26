@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #fff;
   color: #1a1b1f;
   font-family: Intervariable, Arial, sans-serif;
   font-size: 16px;
@@ -1070,7 +1070,7 @@ figcaption {
 }
 
 .rounded-edges {
-  background-image: url('../images/front-what-we-do.jpg');
+  background-image: url('../images/front-what-we-do.webp');
   background-size: cover;
   border-radius: 10px;
 }
@@ -1183,11 +1183,11 @@ figcaption {
 .intro-header-pc {
   box-sizing: border-box;
   color: #1a1b1f;
-  background-color: #f5f5f5;
+  background-color: #fff;
   background-image: none;
   justify-content: center;
   align-items: center;
-  min-height: 527px;
+  min-height: 517px;
   margin-bottom: 0;
   padding: 57.6px 0;
   display: flex;
@@ -1216,13 +1216,25 @@ figcaption {
   color: #1a1b1f;
   margin-top: 0;
   margin-bottom: 28px;
-  font-size: 62px;
+  font-size: 55px;
   font-weight: 500;
-  line-height: 70px;
+  line-height: 63px;
 }
 
 .intro-header-pc .hero-title-line {
   display: block;
+  font-size: 55px;
+  line-height: 63px;
+}
+
+.intro-header-pc .hero-title-line-secondary {
+  color: transparent;
+  background-image: linear-gradient(90deg, #ff7a1a 0%, #0866ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  font-size: 79px;
+  line-height: 87px;
 }
 
 .intro-header-pc .paragraph-bigger.cc-bigger-white-light {
@@ -1231,7 +1243,7 @@ figcaption {
   max-width: 520px;
   font-size: 22px;
   font-weight: 500;
-  line-height: 32px;
+  line-height: 30px;
 }
 
 .intro-header-pc + .section.cc-store-home-wrap .home-content-wrap {
@@ -2028,13 +2040,23 @@ figcaption {
   }
 
   .intro-header-pc .heading-jumbo {
-    font-size: 54px;
-    line-height: 62px;
+    font-size: 55px;
+    line-height: 63px;
+  }
+
+  .intro-header-pc .hero-title-line {
+    font-size: 55px;
+    line-height: 63px;
+  }
+
+  .intro-header-pc .hero-title-line-secondary {
+    font-size: 79px;
+    line-height: 87px;
   }
 
   .intro-header-pc .paragraph-bigger.cc-bigger-white-light {
-    font-size: 21px;
-    line-height: 31px;
+    font-size: 22px;
+    line-height: 30px;
   }
 
   .section-copy.cc-cta {
@@ -2298,13 +2320,23 @@ figcaption {
 
   .intro-header-pc .heading-jumbo {
     margin-bottom: 22px;
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 45px;
+    line-height: 53px;
+  }
+
+  .intro-header-pc .hero-title-line {
+    font-size: 45px;
+    line-height: 53px;
+  }
+
+  .intro-header-pc .hero-title-line-secondary {
+    font-size: 69px;
+    line-height: 77px;
   }
 
   .intro-header-pc .paragraph-bigger.cc-bigger-white-light {
     font-size: 18px;
-    line-height: 28px;
+    line-height: 26px;
   }
 
   .section-copy {
@@ -2523,12 +2555,22 @@ figcaption {
 
   .intro-header-pc .heading-jumbo {
     margin-bottom: 20px;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 45px;
+    line-height: 53px;
+  }
+
+  .intro-header-pc .hero-title-line {
+    font-size: 45px;
+    line-height: 53px;
+  }
+
+  .intro-header-pc .hero-title-line-secondary {
+    font-size: 69px;
+    line-height: 77px;
   }
 
   .intro-header-pc .paragraph-bigger.cc-bigger-white-light {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 26px;
   }
 
@@ -2727,8 +2769,8 @@ body.sc-menu-open {
 }
 
 body {
-  --pc-nav-bg: rgb(245 245 245 / .7);
-  --pc-mobile-menu-bg: rgb(245 245 245 / .95);
+  --pc-nav-bg: rgb(255 255 255 / .7);
+  --pc-mobile-menu-bg: rgb(255 255 255 / .95);
   --pc-nav-text: #777;
   --pc-nav-text-active: #1d1d1d;
   --pc-nav-accent: #7f9fbd;
