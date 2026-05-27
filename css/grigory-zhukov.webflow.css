@@ -1293,7 +1293,7 @@ figcaption {
 .intro-header-pc .paragraph-bigger.cc-bigger-white-light {
   opacity: 1;
   color: rgb(26 27 31 / .64);
-  max-width: 520px;
+  max-width: 460px;
   font-size: 22px;
   font-weight: 500;
   line-height: 30px;
@@ -2435,7 +2435,7 @@ figcaption {
   }
 
   .about-grid, .about-grid.cc-about-2 {
-    grid-row-gap: 26px;
+    grid-row-gap: 27px;
     margin-bottom: 140px;
   }
 
@@ -2706,7 +2706,7 @@ figcaption {
   }
 
   .about-grid, .about-grid.cc-about-2 {
-    grid-row-gap: 20px;
+    grid-row-gap: 27px;
     margin-bottom: 112px;
   }
 
