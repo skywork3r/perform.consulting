@@ -1230,6 +1230,11 @@ figcaption {
   line-height: 53px;
 }
 
+.centered-container-pc.hero .pcsectionheading {
+  font-size: 47px;
+  line-height: 53px;
+}
+
 .intro-header-pc {
   box-sizing: border-box;
   color: #1a1a1a;
@@ -2254,7 +2259,8 @@ figcaption {
     line-height: 48px;
   }
 
-  .section.cc-store-home-wrap .pcsectionheading {
+  .section.cc-store-home-wrap .pcsectionheading,
+  .centered-container-pc.hero .pcsectionheading {
     font-size: 46px;
     line-height: 52px;
   }
@@ -2733,7 +2739,8 @@ figcaption {
     line-height: 46px;
   }
 
-  .section.cc-store-home-wrap .pcsectionheading {
+  .section.cc-store-home-wrap .pcsectionheading,
+  .centered-container-pc.hero .pcsectionheading {
     font-size: 42px;
     line-height: 48px;
   }
