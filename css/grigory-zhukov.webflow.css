@@ -1245,6 +1245,8 @@ figcaption {
 .intro-header-pc .intro-content.cc-homepage {
   width: min(92%, 980px);
   max-width: none;
+  margin-top: clamp(140px, 14vh, 180px);
+  margin-bottom: 200px;
 }
 
 .intro-header-pc .intro-text {
@@ -1257,7 +1259,7 @@ figcaption {
 .intro-header-pc .pchero-heading {
   color: #1a1a1a;
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
   font-size: 47px;
   font-weight: 500;
   line-height: 53px;
@@ -2451,7 +2453,7 @@ figcaption {
   }
 
   .intro-header-pc .pchero-heading {
-    margin-bottom: 22px;
+    margin-bottom: 5px;
     font-size: 40px;
     line-height: 48px;
   }
@@ -2715,7 +2717,7 @@ figcaption {
   }
 
   .intro-header-pc .pchero-heading {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     font-size: 40px;
     line-height: 46px;
   }
