@@ -3037,7 +3037,11 @@ body {
   --pc-nav-text: #777;
   --pc-nav-text-active: #1d1d1d;
   --pc-nav-accent: #7f9fbd;
-  --pc-mobile-pill-bg: #f9f9f9;
+  --pc-mobile-menu-button-bg: #1a1b1f;
+  --pc-mobile-menu-button-hover-bg: #32343a;
+  --pc-mobile-menu-button-active-bg: #43464d;
+  --pc-mobile-menu-button-current-bg: #fff;
+  --pc-mobile-menu-button-current-text: #1a1b1f;
   --pc-page-title-offset: clamp(140px, 14vh, 180px);
 }
 
@@ -3083,18 +3087,41 @@ body {
   justify-self: start;
   align-items: center;
   display: inline-flex;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 .logo-link:hover,
 .logo-link:focus {
   opacity: 1;
   color: inherit;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+.logo-link:active {
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+.logo-link:focus-visible {
+  border-radius: 50%;
+  outline: 2px solid rgb(127 159 189 / .45);
+  outline-offset: 4px;
 }
 
 .navigation .logo-image {
   width: 45px;
   height: 45px;
   object-fit: contain;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
 }
 
 .menu {
@@ -3323,7 +3350,7 @@ body {
     height: 100dvh !important;
     min-height: 100vh;
     min-height: 100dvh;
-    padding: 4.65rem .9rem 2rem !important;
+    padding: clamp(6.875rem, calc(22vh - 30px), 11.125rem) .9rem 2rem !important;
     display: block !important;
     position: fixed !important;
     inset: 0 !important;
@@ -3348,12 +3375,26 @@ body {
     margin: 0 auto 1.2rem;
     text-decoration: none;
     display: inline-flex !important;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
   }
 
   .navigation-items[data-nav-menu-open] .mobile-menu-logo-link:hover,
-  .navigation-items[data-nav-menu-open] .mobile-menu-logo-link:focus {
+  .navigation-items[data-nav-menu-open] .mobile-menu-logo-link:focus,
+  .navigation-items[data-nav-menu-open] .mobile-menu-logo-link:active {
     opacity: 1;
     color: var(--pc-nav-accent);
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .navigation-items[data-nav-menu-open] .mobile-menu-logo-link:focus-visible {
+    border-radius: 50%;
+    outline: 2px solid rgb(127 159 189 / .45);
+    outline-offset: 4px;
   }
 
   .navigation-items[data-nav-menu-open] .mobile-menu-logo-link .logo-image {
@@ -3364,21 +3405,22 @@ body {
 
   .navigation-items[data-nav-menu-open] .navigation-item,
   .navigation-items[data-nav-menu-open] .navigation-item.w-nav-link {
-    color: var(--pc-nav-text) !important;
+    color: #fff !important;
     text-align: center;
     letter-spacing: .09em;
-    background: var(--pc-mobile-pill-bg) !important;
+    background: var(--pc-mobile-menu-button-bg) !important;
     border-radius: 8em !important;
     justify-content: center;
     align-items: center;
-    width: min(18rem, calc(100vw - 1.8rem));
-    height: 3.45rem;
+    width: min(16.25rem, calc(100vw - 1.8rem));
+    height: 3.12rem;
     margin: 0 auto .55rem;
-    padding: 0 1rem;
-    font-size: .98rem;
-    font-weight: 500;
-    line-height: calc(.98rem + 8px);
+    padding: 0 .9rem;
+    font-size: .88rem;
+    font-weight: 400;
+    line-height: calc(.88rem + 8px);
     display: flex !important;
+    box-sizing: border-box;
     box-shadow: none;
   }
 
@@ -3388,8 +3430,13 @@ body {
 
   .navigation-items[data-nav-menu-open] .navigation-item:hover,
   .navigation-items[data-nav-menu-open] .navigation-item:focus {
-    color: var(--pc-nav-text-active) !important;
-    background: #fff !important;
+    color: #fff !important;
+    background: var(--pc-mobile-menu-button-hover-bg) !important;
+  }
+
+  .navigation-items[data-nav-menu-open] .navigation-item:active {
+    color: #fff !important;
+    background: var(--pc-mobile-menu-button-active-bg) !important;
   }
 
   .navigation-items[data-nav-menu-open] .navigation-item.w--current,
@@ -3401,11 +3448,11 @@ body {
   .navigation-items[data-nav-menu-open] .navigation-item.w--current:focus,
   .navigation-items[data-nav-menu-open] .navigation-item.sc-mobile-current:focus,
   .navigation-items[data-nav-menu-open] .navigation-item[aria-current="page"]:focus {
-    color: var(--pc-nav-text-active) !important;
-    background: #fff !important;
+    color: var(--pc-mobile-menu-button-current-text) !important;
+    background: var(--pc-mobile-menu-button-current-bg) !important;
     cursor: default;
     pointer-events: none;
-    box-shadow: none;
+    box-shadow: inset 0 0 0 1px rgb(26 27 31 / .12);
   }
 }
 
@@ -3442,8 +3489,8 @@ body {
   .navigation-items[data-nav-menu-open] .navigation-item,
   .navigation-items[data-nav-menu-open] .navigation-item.w-nav-link {
     white-space: normal;
-    font-size: .96rem;
-    line-height: calc(.96rem + 8px);
+    font-size: .86rem;
+    line-height: calc(.86rem + 8px);
   }
 }
 
