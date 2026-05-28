@@ -962,7 +962,7 @@ figcaption {
 
 .contact-email-link {
   opacity: .6;
-  margin-top: -2px;
+  margin-top: -3px;
   margin-bottom: 0;
   display: block;
 }
@@ -2394,6 +2394,7 @@ figcaption {
 
   .contact-map-grid {
     grid-template-columns: 1fr;
+    margin-bottom: 120px;
   }
 
   .contact-details {
@@ -2713,7 +2714,7 @@ figcaption {
 
   .contact-map-grid {
     grid-row-gap: 28px;
-    margin-bottom: var(--pc-page-title-offset);
+    margin-bottom: 120px;
   }
 
   .contact-map {
