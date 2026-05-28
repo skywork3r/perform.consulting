@@ -703,7 +703,7 @@ figcaption {
   opacity: 1;
   color: #1a1a1a;
   max-width: none;
-  margin-top: -10px;
+  margin-top: 0;
   margin-bottom: 40px;
   font-size: 16px;
   font-weight: 400;
@@ -1332,7 +1332,18 @@ figcaption {
 
 .container-2 {
   text-align: center;
+  width: min(90%, 1200px);
+  max-width: 1200px;
   margin-bottom: 160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-3 {
+  width: min(90%, 1200px);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-copy {
@@ -1851,7 +1862,7 @@ figcaption {
 .pcsubpagehdr.cc-subpage .intro-content {
   width: min(92%, 980px);
   max-width: none;
-  margin: 76px auto 70px;
+  margin: clamp(140px, 14vh, 180px) auto 80px;
   transform: none;
 }
 
@@ -2172,7 +2183,7 @@ figcaption {
 
   .pcsubpagehdr.cc-subpage .intro-content {
     margin-top: 110px;
-    margin-bottom: 77px;
+    margin-bottom: 72px;
   }
 
   .pcsubpageheading {
@@ -2555,7 +2566,8 @@ figcaption {
   }
 
   .container-3 {
-    max-width: 93%;
+    width: 90%;
+    max-width: 1200px;
   }
 
   .paragraphcareerstop {
@@ -2821,11 +2833,12 @@ figcaption {
   }
 
   .container-3 {
-    max-width: 93%;
+    width: 90%;
+    max-width: 1200px;
   }
 
   .paragraphcareerstop {
-    margin-top: -20px;
+    margin-top: 0;
     margin-bottom: 20px;
   }
 
@@ -2853,7 +2866,7 @@ figcaption {
 
   .pcsubpagehdr.cc-subpage .intro-content {
     margin-top: 79px;
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 
   .pcsubpageheading {
