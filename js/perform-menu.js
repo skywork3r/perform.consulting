@@ -41,6 +41,15 @@
           item.removeAttribute("aria-current");
         }
       });
+      document.querySelectorAll(".navigation .mobile-menu-nav-button").forEach(function (item) {
+        var isCurrent = normalizePath(item.getAttribute("data-href") || "") === currentPath;
+        item.classList.toggle("sc-mobile-current", isCurrent);
+        if (isCurrent) {
+          item.setAttribute("aria-current", "page");
+        } else {
+          item.removeAttribute("aria-current");
+        }
+      });
     }
 
     navigations.forEach(function (navigation) {
@@ -50,14 +59,49 @@
         return;
       }
 
-      var menuLogo = sourceLogo.cloneNode(true);
-      menuLogo.className = "mobile-menu-logo-link w-inline-block";
+      function navigateFromMobileMenu(event) {
+        event.preventDefault();
+        var target = event.currentTarget.getAttribute("data-href");
+        if (!target) {
+          return;
+        }
+        window.location.href = target;
+      }
+
+      var menuLogo = document.createElement("button");
+      menuLogo.type = "button";
+      menuLogo.className = "mobile-menu-logo-link";
+      menuLogo.innerHTML = sourceLogo.innerHTML;
       menuLogo.setAttribute("aria-label", "Home");
+      menuLogo.setAttribute("data-href", sourceLogo.getAttribute("href") || "./");
       menuLogo.removeAttribute("aria-current");
       Array.prototype.slice.call(menuLogo.querySelectorAll("[id]")).forEach(function (item) {
         item.removeAttribute("id");
       });
+      menuLogo.addEventListener("click", navigateFromMobileMenu);
       menuItems.insertBefore(menuLogo, menuItems.firstChild);
+
+      var firstDesktopLink = menuLogo.nextSibling;
+      Array.prototype.slice.call(menuItems.querySelectorAll(".navigation-item")).forEach(function (item) {
+        var menuButton = document.createElement("button");
+        menuButton.type = "button";
+        menuButton.className = "mobile-menu-nav-button";
+        menuButton.textContent = item.textContent;
+        menuButton.setAttribute("data-href", item.getAttribute("href") || "");
+        menuButton.addEventListener("click", navigateFromMobileMenu);
+        menuItems.insertBefore(menuButton, firstDesktopLink);
+      });
+
+      menuItems.addEventListener("contextmenu", function (event) {
+        if (event.target.closest(".mobile-menu-logo-link, .mobile-menu-nav-button")) {
+          event.preventDefault();
+        }
+      });
+      menuItems.addEventListener("dragstart", function (event) {
+        if (event.target.closest(".mobile-menu-logo-link, .mobile-menu-nav-button")) {
+          event.preventDefault();
+        }
+      });
     });
 
     syncCurrentNavigationItems();
@@ -100,7 +144,7 @@
     });
 
     document.addEventListener("click", function (event) {
-      var item = event.target.closest('.navigation-items[data-nav-menu-open] [aria-current="page"]');
+      var item = event.target.closest('.navigation-items[data-nav-menu-open] > .navigation-item[aria-current="page"]');
       if (item) {
         event.preventDefault();
       }
